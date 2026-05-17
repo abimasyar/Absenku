@@ -1,0 +1,87 @@
+/* ============================================
+   AbsenKu Design System — Core Tokens & Reset
+   ============================================ */
+:root {
+  --bg-primary: hsl(225, 25%, 6%);
+  --bg-secondary: hsl(225, 22%, 10%);
+  --bg-surface: hsl(225, 20%, 13%);
+  --bg-surface-hover: hsl(225, 20%, 16%);
+  --bg-surface-elevated: hsl(225, 18%, 17%);
+  --border-color: hsl(225, 15%, 18%);
+  --border-color-light: hsl(225, 15%, 22%);
+  --text-primary: hsl(220, 20%, 95%);
+  --text-secondary: hsl(220, 15%, 65%);
+  --text-tertiary: hsl(220, 12%, 45%);
+  --color-primary: hsl(215, 100%, 58%);
+  --color-primary-hover: hsl(215, 100%, 65%);
+  --color-primary-subtle: hsla(215, 100%, 58%, 0.12);
+  --color-primary-glow: hsla(215, 100%, 58%, 0.25);
+  --color-hadir: hsl(152, 72%, 46%);
+  --color-hadir-subtle: hsla(152, 72%, 46%, 0.12);
+  --color-izin: hsl(43, 96%, 56%);
+  --color-izin-subtle: hsla(43, 96%, 56%, 0.12);
+  --color-sakit: hsl(199, 89%, 58%);
+  --color-sakit-subtle: hsla(199, 89%, 58%, 0.12);
+  --color-alpha: hsl(0, 78%, 58%);
+  --color-alpha-subtle: hsla(0, 78%, 58%, 0.12);
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-xl: 20px; --radius-full: 9999px;
+  --shadow-md: 0 4px 12px hsla(0,0%,0%,0.35);
+  --shadow-lg: 0 8px 30px hsla(0,0%,0%,0.4);
+  --transition-fast: 150ms ease; --transition-base: 250ms ease; --transition-slow: 400ms ease;
+  --sidebar-width: 260px; --navbar-height: 64px;
+
+  /* Progress Bar */
+  --progress-height: 8px;
+  --progress-bg: hsl(225, 20%, 18%);
+  --progress-fill: var(--color-primary);
+
+  /* Quick Stats Bar */
+  --quick-stats-bg: var(--bg-surface);
+  --quick-stats-border: var(--border-color);
+  --quick-stats-radius: var(--radius-lg);
+
+  /* Sidebar User Section */
+  --sidebar-user-bg: var(--bg-surface);
+  --sidebar-user-border: var(--border-color);
+  --sidebar-user-radius: var(--radius-md);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font-family:var(--font-family);font-size:0.9375rem;line-height:1.5;color:var(--text-primary);background:var(--bg-primary);min-height:100vh;overflow-x:hidden}
+a{color:var(--color-primary);text-decoration:none;transition:color var(--transition-fast)}
+a:hover{color:var(--color-primary-hover)}
+input,select,textarea,button{font-family:inherit;font-size:inherit;color:inherit}
+button{cursor:pointer;border:none;background:none}
+ul,ol{list-style:none}
+img{max-width:100%;display:block}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:hsl(225,15%,25%);border-radius:var(--radius-full)}
+
+/* Animations */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes toastIn{from{opacity:0;transform:translateX(100px)}to{opacity:1;transform:translateX(0)}}
+@keyframes toastOut{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(100px)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+.animate-fade-in{animation:fadeIn var(--transition-base) ease both}
+.animate-fade-in-up{animation:fadeInUp var(--transition-slow) ease both}
+.animate-scale-in{animation:scaleIn 500ms cubic-bezier(.34,1.56,.64,1) both}
+.delay-1{animation-delay:50ms}.delay-2{animation-delay:100ms}.delay-3{animation-delay:150ms}
+.delay-4{animation-delay:200ms}.delay-5{animation-delay:250ms}.delay-6{animation-delay:300ms}
+.delay-7{animation-delay:350ms}.delay-8{animation-delay:400ms}.delay-9{animation-delay:450ms}
+.delay-10{animation-delay:500ms}.delay-11{animation-delay:550ms}.delay-12{animation-delay:600ms}
+
+.text-center{text-align:center}.text-secondary{color:var(--text-secondary)}
+.flex{display:flex}.flex-col{flex-direction:column}.items-center{align-items:center}
+.justify-between{justify-content:space-between}.justify-center{justify-content:center}
+.gap-sm{gap:.5rem}.gap-md{gap:.75rem}.gap-base{gap:1rem}.gap-lg{gap:1.5rem}.gap-xl{gap:2rem}
+.flex-1{flex:1}.flex-wrap{flex-wrap:wrap}.w-full{width:100%}
+.mt-base{margin-top:1rem}.mt-lg{margin-top:1.5rem}.mb-base{margin-bottom:1rem}.mb-lg{margin-bottom:1.5rem}
